@@ -1,0 +1,42 @@
+name: Dynamic Portfolio Sync Automation
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *' 
+  workflow_dispatch: 
+
+jobs:
+  build-and-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Source Code Repository
+        uses: actions/checkout@v4
+
+      - name: Initialize Python Runtime Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Repository Scan Script
+        env:
+          GITHUB_TOKEN: ${{ secrets.PORTFOLIO_TOKEN }} 
+        run: python fetch_repos.py
+
+      - name: Commit and Push Updated projects.json Dataset
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add projects.json
+          if git diff --staged --quiet; then
+            echo "No new updates found in repositories. Skipping commit."
+          else
+            git commit -m "chore: automated refresh of dynamic project dataset [skip ci]"
+            git push
+          fi
