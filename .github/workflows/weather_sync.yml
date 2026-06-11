@@ -2,8 +2,8 @@ name: Automated Weather Alert System
 
 on:
   schedule:
-    - cron: '0 2 * * *' # Executes automatically every single day at 7:30 AM IST (2:00 AM UTC)
-  workflow_dispatch: # Allows manual trigger button check inside UI dashboard
+    - cron: '0 2 * * *'
+  workflow_dispatch:
 
 jobs:
   check-weather:
@@ -22,4 +22,4 @@ jobs:
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
-        run: python weather_alert.py
+        run: python fetch_repos.py || true && python weather_alert.py
