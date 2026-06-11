@@ -23,7 +23,7 @@ def check_weather_and_alert():
         return
 
     # Fetch data using standard urllib setup
-    url = f"https://api.github.com/data/2.5/weather?q={CITY}&appid={api_key}&units=metric"
+    url = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={api_key}&units=metric"
     
     try:
         req = urllib.request.Request(url)
