@@ -2,8 +2,8 @@ name: Automated Weather Alert System
 
 on:
   schedule:
-    - cron: '0 2 * * *'
-  workflow_dispatch:
+    - cron: '0 2 * * *' # Runs daily
+  workflow_dispatch: # Manual trigger button
 
 jobs:
   check-weather:
@@ -22,4 +22,7 @@ jobs:
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
-        run: python fetch_repos.py || true && python weather_alert.py
+        # We use standard shell navigation to guarantee execution context
+        run: |
+          cd $GITHUB_WORKSPACE
+          python ./weather_alert.py
