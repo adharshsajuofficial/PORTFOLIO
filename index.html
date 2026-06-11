@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adharsh | Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Adharsh<span>.</span></a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#blog">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Adharsh</span></h1>
+            <p>A passionate developer and designer building functional, beautiful web experiences from scratch.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <h2>My Projects</h2>
+            <p class="counter-text">Showing <span id="project-count">3</span> project(s)</p>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="code">Code</button>
+            </div>
+        </div>
+
+        <div class="projects-grid" id="projects-container">
+        </div>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <h2>From The Blog</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-content">
+                    <span class="blog-date">June 7, 2026</span>
+                    <h3>Demystifying Semiconductors</h3>
+                    <p>Exploring the core physics driving zener breakdowns, carrier flows, and modern structural solid-state components.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-content">
+                    <span class="blog-date">May 24, 2026</span>
+                    <h3>The Security of Mobile Ecosystems</h3>
+                    <p>How application isolation models guard critical user permissions against media and storage side-channel threats.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-content">
+                    <span class="blog-date">April 12, 2026</span>
+                    <h3>Clean Architectures in C</h3>
+                    <p>Why strict memory allocation patterns and linear buffer strategies matter when building highly performant applications.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Adharsh. Built sweetly from scratch.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
