@@ -27,7 +27,6 @@ jobs:
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
-        # The true fallback syntax ensures a failed weather fetch never crashes your main portfolio update pipeline
         run: python weather_alert.py || echo "Weather warning checklist processed."
 
       - name: Execute Repository Scan Script
@@ -45,5 +44,7 @@ jobs:
             echo "No new updates found in repositories. Skipping commit."
           else
             git commit -m "chore: automated refresh of dynamic project dataset [skip ci]"
-            git push
+            # Pull any outstanding remote history variations gracefully before pushing
+            git pull --rebase origin main
+            git push origin main
           fi
