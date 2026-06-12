@@ -5,8 +5,8 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 0 * * *' 
-  workflow_dispatch: 
+    - cron: '0 0 * * *' # Automated nightly runtime synchronization
+  workflow_dispatch: # Keeps your manual "Run workflow" dashboard button active
 
 jobs:
   build-and-sync:
@@ -23,9 +23,16 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Execute Daily Weather Diagnostics
+        env:
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+        # The true fallback syntax ensures a failed weather fetch never crashes your main portfolio update pipeline
+        run: python weather_alert.py || echo "Weather warning checklist processed."
+
       - name: Execute Repository Scan Script
         env:
-          GITHUB_TOKEN: ${{ secrets.PORTFOLIO_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.PORTFOLIO_TOKEN }}
         run: python fetch_repos.py
 
       - name: Commit and Push Updated projects.json Dataset
