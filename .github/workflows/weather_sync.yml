@@ -18,10 +18,16 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Diagnostic Directory Scan
+        run: |
+          echo "=== CURRENT WORKING DIRECTORY ==="
+          pwd
+          echo "=== LISTING FILES IN ROOT ==="
+          ls -la
+          echo "============================="
+
       - name: Run Weather Diagnostics
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
-        # Setting the explicit execution directory root directly on the shell step layer
-        working-directory: ./
         run: python weather_alert.py
