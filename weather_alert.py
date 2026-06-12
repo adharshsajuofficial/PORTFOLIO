@@ -40,7 +40,7 @@ def check_weather_and_alert():
     trigger_alert = False
     reason = ""
 
-    if temp > 35:
+    if temp > 0:
         trigger_alert = True
         reason += f"• High temperature alert: The current temperature is {temp}°C (Exceeds 35°C).\n"
     if "rain" in weather_condition or "drizzle" in weather_condition:
