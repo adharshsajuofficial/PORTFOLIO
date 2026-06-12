@@ -59,11 +59,14 @@ def send_email(temp, desc, reason, password):
     msg['To'] = RECEIVER_EMAIL
     msg['Subject'] = f"⚠️ WEATHER ALERT: Critical Conditions in {CITY}"
 
+    # Fix: Process and convert string line breaks down here before injecting into the f-string block
+    formatted_html_reason = reason.replace('\n', '<br>')
+
     body = f"""
     <h3>Weather Alert Notification System</h3>
     <p>Automated triggers have matched your threshold rules for <b>{CITY}</b>:</p>
     <div style="background: #fff5f5; border-left: 4px solid #e53e3e; padding: 10px; margin: 15px 0;">
-        {reason.replace('\n', '<br>')}
+        {formatted_html_reason}
     </div>
     <p><b>Current Status:</b> {temp}°C with {desc}.</p>
     <hr style="border:none; border-top:1px solid #eee;">
@@ -73,14 +76,20 @@ def send_email(temp, desc, reason, password):
     msg.attach(MIMEText(body, 'html'))
 
     try:
+        print("Connecting to secure Gmail SMTP relay server...")
         server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
+        server.ehlo()  
+        server.starttls()  
+        server.ehlo()
+        
+        print(f"Attempting secure login handshake for: {SENDER_EMAIL}")
         server.login(SENDER_EMAIL, password)
+        
         server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, msg.as_string())
         server.quit()
-        print("Alert email dispatched successfully.")
+        print("Alert email dispatched successfully! Confirm inbox delivery.")
     except Exception as e:
-        print(f"Failed to dispatch alert email protocol: {e}")
+        print(f"Failed to dispatch alert email protocol error trace: {e}")
 
 if __name__ == "__main__":
     check_weather_and_alert()
