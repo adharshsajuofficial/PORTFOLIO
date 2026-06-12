@@ -5,8 +5,9 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 0 * * *' # Automated nightly runtime synchronization
-  workflow_dispatch: # Keeps your manual "Run workflow" dashboard button active
+    # 7:00 AM IST translates exactly to 1:30 AM UTC
+    - cron: '30 1 * * *'
+  workflow_dispatch:
 
 jobs:
   build-and-sync:
@@ -29,6 +30,11 @@ jobs:
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
         run: python weather_alert.py || echo "Weather warning checklist processed."
 
+      - name: Compile 7 AM Daily News Digest
+        env:
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+        run: python news_digest.py || echo "News parsing step failed, moving forward."
+
       - name: Execute Repository Scan Script
         env:
           GITHUB_TOKEN: ${{ secrets.PORTFOLIO_TOKEN }}
@@ -44,7 +50,6 @@ jobs:
             echo "No new updates found in repositories. Skipping commit."
           else
             git commit -m "chore: automated refresh of dynamic project dataset [skip ci]"
-            # Pull any outstanding remote history variations gracefully before pushing
             git pull --rebase origin main
             git push origin main
           fi
