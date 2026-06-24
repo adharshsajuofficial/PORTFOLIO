@@ -1,19 +1,19 @@
 [
     {
+        "name": "PORTFOLIO",
+        "description": null,
+        "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
+        "language": "Python",
+        "category": "code",
+        "updated_at": "2026-06-23T05:34:53Z"
+    },
+    {
         "name": "tide_ai",
         "description": null,
         "html_url": "https://github.com/adharshsajuofficial/tide_ai",
         "language": "Dart",
         "category": "code",
         "updated_at": "2026-06-23T03:59:19Z"
-    },
-    {
-        "name": "PORTFOLIO",
-        "description": null,
-        "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
-        "language": "Python",
-        "category": "code",
-        "updated_at": "2026-06-22T06:44:52Z"
     },
     {
         "name": "NexTrack",
