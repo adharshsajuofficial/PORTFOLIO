@@ -1,5 +1,13 @@
 [
     {
+        "name": "PORTFOLIO",
+        "description": null,
+        "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
+        "language": "Python",
+        "category": "code",
+        "updated_at": "2026-07-04T05:01:57Z"
+    },
+    {
         "name": "leetcode",
         "description": null,
         "html_url": "https://github.com/adharshsajuofficial/leetcode",
@@ -14,14 +22,6 @@
         "language": null,
         "category": "code",
         "updated_at": "2026-07-03T05:11:14Z"
-    },
-    {
-        "name": "PORTFOLIO",
-        "description": null,
-        "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
-        "language": "Python",
-        "category": "code",
-        "updated_at": "2026-07-03T05:08:17Z"
     },
     {
         "name": "tide_ai",
