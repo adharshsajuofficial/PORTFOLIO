@@ -1,11 +1,19 @@
 [
     {
+        "name": "college_manager",
+        "description": "used react and django",
+        "html_url": "https://github.com/adharshsajuofficial/college_manager",
+        "language": "Python",
+        "category": "code",
+        "updated_at": "2026-08-14T03:00:47Z"
+    },
+    {
         "name": "PORTFOLIO",
         "description": null,
         "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
         "language": "Python",
         "category": "code",
-        "updated_at": "2026-08-12T03:33:40Z"
+        "updated_at": "2026-08-13T03:36:32Z"
     },
     {
         "name": "leetcode",
