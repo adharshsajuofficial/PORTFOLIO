@@ -1,11 +1,19 @@
 [
     {
+        "name": "AgentSpend",
+        "description": "AgentSpend — Intelligent Economic Decision Engine for AI Agents. An AI-powered economic layer that enables autonomous agents to evaluate, choose, pay for, and verify services intelligently using x402 on Algorand.",
+        "html_url": "https://github.com/adharshsajuofficial/AgentSpend",
+        "language": "TypeScript",
+        "category": "web",
+        "updated_at": "2026-08-28T15:44:34Z"
+    },
+    {
         "name": "PORTFOLIO",
         "description": null,
         "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
         "language": "Python",
         "category": "code",
-        "updated_at": "2026-08-27T11:42:16Z"
+        "updated_at": "2026-08-28T13:07:40Z"
     },
     {
         "name": "JAT",
