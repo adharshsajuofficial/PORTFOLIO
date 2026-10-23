@@ -1,19 +1,19 @@
 [
     {
+        "name": "PORTFOLIO",
+        "description": null,
+        "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
+        "language": "Python",
+        "category": "code",
+        "updated_at": "2026-10-22T06:16:39Z"
+    },
+    {
         "name": "Music-Playlist-Management-System",
         "description": "DSA project...managing a playlist like a spotify app with previous, next and play buttons. the full list on the right side",
         "html_url": "https://github.com/adharshsajuofficial/Music-Playlist-Management-System",
         "language": "JavaScript",
         "category": "web",
         "updated_at": "2026-10-21T09:40:23Z"
-    },
-    {
-        "name": "PORTFOLIO",
-        "description": null,
-        "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
-        "language": "Python",
-        "category": "code",
-        "updated_at": "2026-10-21T06:12:29Z"
     },
     {
         "name": "AgentSpend",
