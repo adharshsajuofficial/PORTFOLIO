@@ -1,11 +1,19 @@
 [
     {
+        "name": "HackElite_AlenzJaison",
+        "description": null,
+        "html_url": "https://github.com/adharshsajuofficial/HackElite_AlenzJaison",
+        "language": "JavaScript",
+        "category": "web",
+        "updated_at": "2026-10-24T14:40:56Z"
+    },
+    {
         "name": "PORTFOLIO",
         "description": null,
         "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
         "language": "Python",
         "category": "code",
-        "updated_at": "2026-10-23T06:10:24Z"
+        "updated_at": "2026-10-24T06:05:48Z"
     },
     {
         "name": "Music-Playlist-Management-System",
