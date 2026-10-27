@@ -1,19 +1,19 @@
 [
     {
+        "name": "PORTFOLIO",
+        "description": null,
+        "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
+        "language": "Python",
+        "category": "code",
+        "updated_at": "2026-10-26T06:35:19Z"
+    },
+    {
         "name": "CustomerFinder",
         "description": null,
         "html_url": "https://github.com/adharshsajuofficial/CustomerFinder",
         "language": "JavaScript",
         "category": "web",
         "updated_at": "2026-10-25T11:37:14Z"
-    },
-    {
-        "name": "PORTFOLIO",
-        "description": null,
-        "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
-        "language": "Python",
-        "category": "code",
-        "updated_at": "2026-10-25T06:26:00Z"
     },
     {
         "name": "HackElite_AlenzJaison",
