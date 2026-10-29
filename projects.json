@@ -1,11 +1,11 @@
 [
     {
-        "name": "PORTFOLIO",
+        "name": "VolGuard_AI",
         "description": null,
-        "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
-        "language": "Python",
-        "category": "code",
-        "updated_at": "2026-10-27T06:30:43Z"
+        "html_url": "https://github.com/adharshsajuofficial/VolGuard_AI",
+        "language": "JavaScript",
+        "category": "web",
+        "updated_at": "2026-10-28T15:26:39Z"
     },
     {
         "name": "CustomerFinder",
@@ -13,7 +13,23 @@
         "html_url": "https://github.com/adharshsajuofficial/CustomerFinder",
         "language": "JavaScript",
         "category": "web",
-        "updated_at": "2026-10-25T11:37:14Z"
+        "updated_at": "2026-10-28T15:00:34Z"
+    },
+    {
+        "name": "AgentSpend",
+        "description": "AgentSpend — Intelligent Economic Decision Engine for AI Agents. An AI-powered economic layer that enables autonomous agents to evaluate, choose, pay for, and verify services intelligently using x402 on Algorand.",
+        "html_url": "https://github.com/adharshsajuofficial/AgentSpend",
+        "language": "TypeScript",
+        "category": "web",
+        "updated_at": "2026-10-28T15:00:29Z"
+    },
+    {
+        "name": "PORTFOLIO",
+        "description": null,
+        "html_url": "https://github.com/adharshsajuofficial/PORTFOLIO",
+        "language": "Python",
+        "category": "code",
+        "updated_at": "2026-10-28T06:59:46Z"
     },
     {
         "name": "HackElite_AlenzJaison",
@@ -30,14 +46,6 @@
         "language": "JavaScript",
         "category": "web",
         "updated_at": "2026-10-21T09:40:23Z"
-    },
-    {
-        "name": "AgentSpend",
-        "description": "AgentSpend — Intelligent Economic Decision Engine for AI Agents. An AI-powered economic layer that enables autonomous agents to evaluate, choose, pay for, and verify services intelligently using x402 on Algorand.",
-        "html_url": "https://github.com/adharshsajuofficial/AgentSpend",
-        "language": "TypeScript",
-        "category": "web",
-        "updated_at": "2026-08-28T15:44:34Z"
     },
     {
         "name": "JAT",
